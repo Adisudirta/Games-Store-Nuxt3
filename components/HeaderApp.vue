@@ -12,17 +12,17 @@ function handleToggle(): void {
   <header
     class="w-screen bg-gray-900 flex justify-between items-center fixed px-10 py-4 sm:px-20 md:px-28"
   >
-    <router-link to="/" class="flex items-center gap-3">
+    <NuxtLink to="/" class="flex items-center gap-3">
       <img class="w-7" src="../assets/images/joystick.png" alt="logo" />
       <h1 class="font-bold text-gray-400 text-lg">GAMES STORE</h1>
-    </router-link>
+    </NuxtLink>
 
     <!-- Desktop -->
     <div class="hidden md:flex gap-5">
-      <NuxtLink to="/Category" class="text-gray-500 font-bold text-sm">
+      <NuxtLink to="/category" class="text-gray-500 font-bold text-sm">
         Category
       </NuxtLink>
-      <NuxtLink to="/Platform" class="text-gray-500 font-bold text-sm">
+      <NuxtLink to="/platform" class="text-gray-500 font-bold text-sm">
         Platform
       </NuxtLink>
     </div>
@@ -32,12 +32,12 @@ function handleToggle(): void {
       class="absolute bg-gray-700 top-[15vh] p-10 flex flex-col justify-center items-center gap-5 w-3/4 rounded-md"
       :class="{ hidden: isHiden }"
     >
-      <router-link to="/Category" class="text-gray-500 font-bold">
+      <NuxtLayout to="/category" class="text-gray-500 font-bold">
         Category
-      </router-link>
-      <router-link to="/Platform" class="text-gray-500 font-bold">
+      </NuxtLayout>
+      <NuxtLayout to="/platform" class="text-gray-500 font-bold">
         Platform
-      </router-link>
+      </NuxtLayout>
     </div>
 
     <!-- Toggle button -->
